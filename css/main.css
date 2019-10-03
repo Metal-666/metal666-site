@@ -1,0 +1,52 @@
+body {
+    
+    font-family: Lucida Console;
+  
+}
+
+table td {
+    
+    padding: 8px;
+    
+}
+
+#header1 {
+    
+    padding: 10px;
+    margin: 10px 10px 5px 10px;
+    box-shadow: 1px 1px 2px 1px gray;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+
+#header2 {
+    
+    padding: 10px;
+    margin: 5px 10px 10px 10px;
+    box-shadow: 1px 1px 2px 1px gray;
+    border-radius: 0px 0px 10px 10px;
+    
+}
+
+table td + td {
+    
+    border-left: 2px solid gray;
+    
+}
+
+#headerTable td {
+    
+    background: white;
+    color: gray;
+    
+    transition-property: background, color;
+    transition-duration: .5s;
+    
+}
+
+#headerTable td:hover {
+    
+    background: gray;
+    color: white;
+    
+}
