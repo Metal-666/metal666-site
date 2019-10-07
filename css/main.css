@@ -1,21 +1,79 @@
 body {
     
     font-family: Lucida Console;
+    
+    margin: 0%;
+    padding: 0%;
   
+}
+
+table {
+    
+    border-spacing: 0;
+    
 }
 
 table td {
     
     padding: 8px;
+    border-spacing: 0;
     
 }
 
-#header1 {
+#headerMain {
     
+    background: #bda6a6;
+    color: white;
     padding: 10px;
     margin: 10px 10px 5px 10px;
-    box-shadow: 1px 1px 2px 1px gray;
+    box-shadow: 1px 1px 3px 1px gray;
     border-radius: 10px 10px 0px 0px;
+    
+    /*transition: box-shadow, 0.3s ease-in-out;*/
+    
+}
+
+#headerMain:hover {
+    
+    /*box-shadow: 1px 1px 2px 5px gray;*/
+    
+}
+
+#headerMusic {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #8cbf67;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    box-shadow: 1px 1px 3px 1px gray;
+    
+    /*transition: box-shadow, 0.3s ease-in-out;*/
+    
+}
+
+.divInline {
+    
+    display: inline-block;
+    
+}
+
+#backArrow {
+
+    transition: all 0.2s ease-in;
+    
+}
+
+#backArrow:hover {
+    
+    transform: translateX(-6px);
+    
+    cursor: pointer;
     
 }
 
@@ -23,12 +81,186 @@ table td {
     
     padding: 10px;
     margin: 5px 10px 10px 10px;
-    box-shadow: 1px 1px 2px 1px gray;
+    box-shadow: 1px 1px 3px 1px gray;
     border-radius: 0px 0px 10px 10px;
     
 }
 
-table td + td {
+.song {
+    
+    color: gray;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: .75px .75px 1px .75px gray;
+    border-radius: 3px;
+    transform: scale(1, 1);
+    transition: all 0.15s ease-in;
+    transition-property: box-shadow, transform;
+    
+}
+
+.song:hover {
+    
+    transform: scale(1.01, 1.01);
+    box-shadow: 1px 1px 1px 1px gray;
+    cursor: pointer;
+    
+}
+
+.playerControl {
+    
+    color: gray !important;
+	transition: color, .35s, ease-in !important;
+	font-size: 48px !important;
+    
+}
+
+.playerControl:hover {
+    
+    color: black !important;
+    cursor: pointer !important;
+    
+}
+
+#noSongButton {
+		
+	font-size: 48px !important;
+		
+}
+
+#noSongButton:hover {
+		
+	cursor: default;
+		
+}
+
+.progressBar {
+		
+	position: static;
+		
+}
+
+.progressBar:hover {
+		
+	cursor: pointer;
+		
+}
+
+.progress {
+
+	width: 200px;
+	height: 7.5px;
+	background-color: lightgray;
+	position: absolute;
+	overflow: hidden;
+	border-radius: 10px;
+	transition: height 0.1s ease-out;
+		
+}
+
+.progress:hover {
+		
+	height: 12px;
+		
+}
+
+.progressLine {
+
+	width: 0%;
+	height: 100%;
+	background-color: #ff9a57;
+	transition: width 0.3s ease-out, background-color 0.3s ease-out;
+		
+}
+
+.progress:hover + .progressThumb, .progress:hover + .progressThumbIdle {
+		
+	width: 7.5px;
+	height: 15px;
+	background-color: #d44913;
+		
+}
+
+.progress:hover .progressLine {
+		
+	background-color: #ff6400;
+		
+}
+
+.progressThumb {
+		
+	width: 7.5px;
+	height: 7.5px;
+	border-radius: 10px;
+	background-color: #d36135;
+	border-color: darkred;
+	transition: width 0.1s ease-out, height 0.1s ease-out, border-radius 0.1s ease-out, background-color 0.3s ease-out;;
+	position: relative;
+	margin-left: -5px;
+		
+}
+
+.progressThumbIdle {
+		
+	width: 7.5px;
+	height: 7.5px;
+	border-radius: 10px;
+	background-color: #d36135;
+	border-color: darkred;
+	transition: width 0.1s ease-out, height 0.1s ease-out, border-radius 0.1s ease-out, left 0.3s ease-out, background-color 0.3s ease-out;;
+	position: relative;
+	margin-left: -5px;
+		
+}
+
+.progressThumb:hover {
+		
+	height: 20px !important;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #992e05;
+		
+}
+
+.progressThumb:hover, .progressThumbIdle:hover {
+		
+	height: 20px !important;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #992e05;
+		
+}
+
+.trackNumber {
+
+	color: gray;
+		
+}
+
+*.unselectable {
+    
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   
+}
+
+#player {
+		
+	width: 200px;
+		
+}
+
+#songName {
+    
+    font-size: 24px;
+    font-style: italic;
+    
+}
+
+#headerTable td + td {
     
     border-left: 2px solid gray;
     
@@ -36,17 +268,26 @@ table td + td {
 
 #headerTable td {
     
-    background: white;
+    background: white radial-gradient(circle, transparent 1%, gray 1%) center/15000%;
     color: gray;
-    
-    transition-property: background, color;
-    transition-duration: .5s;
+
+    transition: all, .3s ease-out;
     
 }
 
 #headerTable td:hover {
     
-    background: gray;
     color: white;
+    cursor: pointer;
+    background-size: 100%;
+    
+}
+
+.block {
+
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 1px 1px 3px 1px gray;
+    border-radius: 10px;
     
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <title>Music</title>
+        <script src="js/simpledrag.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div id="headerMusic">
+            <div class="divInline">
+                <div>
+                    <h1 align="left">Music</h1>
+                </div>
+            </div>
+            <div class="divInline" id="backArrow" onclick='window.open("index.html", "_self");'>
+                <div>
+                    <img src="images/arrow_back.svg" width="50px" height="50px" align="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="block">
+            <div>
+                <audio id="player"></audio>
+				<table>
+                    <tr>
+                        <div id="songName"></div>
+                    </tr>
+                    <tr>
+						<td>
+							<i class="material-icons" id="noSongButton">album</i>
+							<i class="material-icons playerControl buttonPlay" id="playerPlayButton" onclick='playAudio();' style="display: none">play_circle_outline</i>
+							<i class="material-icons playerControl buttonPause" id="playerPauseButton" onclick='pauseAudio();' style="display: none">pause_circle_outline</i>
+						</td>
+						<td class="trackNumber unselectable" id="trackProgress">
+                            00:00
+						</td>
+						<td id="player">
+                            <div class="progressBar">
+                                <div class="progress" id="seekBar">
+                                    <div class="progressLine" id="progressLine"></div>
+                                </div>
+                                <div class="progressThumb" id="progressThumb"></div>
+                            </div>
+                        </td>
+                        <td class="trackNumber unselectable" id="trackDuration">
+                            00:00
+                        </td>
+                        <td>
+                            <i class="material-icons" id="downloadButton" onclick='downloadAudio();' style="color: lightgray; font-size: 48px !important;">cloud_download</i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <h2>My tracks:</h2>
+            
+            <div class="song" onclick='setSong("Calm in the Storm");'>
+                <h3>Calm in the Storm</h3>
+                <small>00:05.13</small>
+            </div>
+            <div class="song" onclick='setSong("Movin\x27 On");'>
+                <h3>Movin' On</h3>
+                <small>00:04.03</small>
+            </div>
+            <div class="song" onclick='setSong("Next Stage");'>
+                <h3>Next Stage</h3>
+                <small>00:05.08</small>
+            </div>
+            <div class="song" onclick='setSong("Damnation");'>
+                <h3>Damnation</h3>
+                <small>00:04.37</small>
+            </div>
+            <div class="song" onclick='setSong("Peaks");'>
+                <h3>Peaks</h3>
+                <small>00:05.20</small>
+            </div>
+        </div>
+        
+        <script src="js/music.js"></script>
+    
+    </body>
+</html>
