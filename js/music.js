@@ -1,4 +1,4 @@
-var player = document.getElementById('player');
+var player = document.getElementById('audioPlayer');
 btnPlay = document.getElementById('playerPlayButton');
 btnPause = document.getElementById('playerPauseButton');
 btnNoSong = document.getElementById('noSongButton');
@@ -10,6 +10,7 @@ progressThumb = document.getElementById('progressThumb');
 trackDuration = document.getElementById('trackDuration');
 trackProgress = document.getElementById('trackProgress');
 songName = document.getElementById('songName');
+elementDownload = document.getElementById('downloadElement');
 //volumeBar = document.getElementById('volume-bar');
 var song;
 
@@ -129,6 +130,8 @@ function setSong(song) {
 	player.load();
     player.play();
 	window.song = song;
+    
+    elementDownload.setAttribute("href", "music/" + song + ".mp3");
 		
 	player.onloadedmetadata = function() {
 				

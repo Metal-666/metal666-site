@@ -28,24 +28,14 @@ table td {
     margin: 10px 10px 5px 10px;
     box-shadow: 1px 1px 3px 1px gray;
     border-radius: 10px 10px 0px 0px;
-    
-    /*transition: box-shadow, 0.3s ease-in-out;*/
-    
+  
 }
 
-#headerMain:hover {
-    
-    /*box-shadow: 1px 1px 2px 5px gray;*/
-    
-}
-
-#headerMusic {
+#headerMusic, #headerProgramming {
     
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    background: #8cbf67;
     color: white;
     padding-left: 10px;
     padding-right: 10px;
@@ -53,8 +43,18 @@ table td {
     padding-bottom: 1px;
     box-shadow: 1px 1px 3px 1px gray;
     
-    /*transition: box-shadow, 0.3s ease-in-out;*/
+}
+
+#headerMusic {
     
+    background: #8cbf67;
+
+}
+
+#headerProgramming {
+    
+    background: #6d67bf;
+
 }
 
 .divInline {
@@ -65,6 +65,7 @@ table td {
 
 #backArrow {
 
+    font-size: 48px !important;
     transition: all 0.2s ease-in;
     
 }
@@ -72,7 +73,6 @@ table td {
 #backArrow:hover {
     
     transform: translateX(-6px);
-    
     cursor: pointer;
     
 }
@@ -86,7 +86,7 @@ table td {
     
 }
 
-.song {
+.selectableBlock, .songBlock {
     
     color: gray;
     padding: 5px;
@@ -99,23 +99,28 @@ table td {
     
 }
 
-.song:hover {
+.selectableBlock:hover, .songBlock:hover {
     
     transform: scale(1.01, 1.01);
     box-shadow: 1px 1px 1px 1px gray;
+    
+}
+
+.songBlock:hover {
+
     cursor: pointer;
     
 }
 
-.playerControl {
+.fontButton {
     
     color: gray !important;
-	transition: color, .35s, ease-in !important;
-	font-size: 48px !important;
+	 transition: color, .35s, ease-in !important;
+	 font-size: 48px !important;
     
 }
 
-.playerControl:hover {
+.fontButton:hover {
     
     color: black !important;
     cursor: pointer !important;
@@ -124,13 +129,13 @@ table td {
 
 #noSongButton {
 		
-	font-size: 48px !important;
+	 font-size: 48px !important;
 		
 }
 
 #noSongButton:hover {
 		
-	cursor: default;
+	 cursor: default;
 		
 }
 
@@ -234,6 +239,7 @@ table td {
 .trackNumber {
 
 	color: gray;
+   margin: 5px;
 		
 }
 
@@ -250,13 +256,29 @@ table td {
 #player {
 		
 	width: 200px;
+   margin: 10px;
 		
+}
+
+.player {
+   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
 }
 
 #songName {
     
     font-size: 24px;
     font-style: italic;
+    
+}
+
+.blockInfo {
+    
+    display: flex;
+    justify-content: space-between;
     
 }
 
@@ -290,4 +312,79 @@ table td {
     box-shadow: 1px 1px 3px 1px gray;
     border-radius: 10px;
     
+}
+
+.tagJVM, .tagDev {
+
+    padding: 5px;
+    display: inline-block;
+    color: black;
+    border-radius: 5px;
+    transition: background 0.3s ease-out, color 0.3s ease-out;
+    background: white;
+
+}
+
+.tagJVM:hover, .tagDev:hover {
+   
+    cursor: help;
+    color: white;
+   
+}
+
+.tagJVM {
+    
+    border: 3px solid red;
+    
+}
+
+.tagDev {
+    
+    border: 3px solid orange;
+    
+}
+
+.tagJVM:hover {
+    
+    background-color: red;
+    
+}
+
+.tagDev:hover {
+
+    background-color: orange;
+    
+}
+
+#tagInfo {
+   
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+    position: fixed;
+    top: 100%;
+    min-height: 60px;
+    overflow: hidden;
+    width: 40%;
+    left: calc(-50vw + 50%);
+    right: calc(-50vw + 50%);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 1px 1px 1px gray;
+    transition: transform 0.3s ease-out, background 0.3s ease-out;
+    color: white;
+   
+}
+
+.tagInfoShowJVM {
+   
+    transform: translateY(-100%);
+    background: red;
+   
+}
+
+.tagInfoShowDev {
+   
+    transform: translateY(-100%);
+    background: orange;
+   
 }

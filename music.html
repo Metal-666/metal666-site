@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <meta name="viewport" content="device-width, initial-scale=1.0">
     <head>
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <title>Music</title>
@@ -12,70 +13,83 @@
         <div id="headerMusic">
             <div class="divInline">
                 <div>
-                    <h1 align="left">Music</h1>
+                    <h1>Music</h1>
                 </div>
             </div>
-            <div class="divInline" id="backArrow" onclick='window.open("index.html", "_self");'>
+            <div class="divInline" onclick='window.open("index.html", "_self");'>
                 <div>
-                    <img src="images/arrow_back.svg" width="50px" height="50px" align="">
+                    <i class="material-icons" id="backArrow">arrow_back</i>
                 </div>
             </div>
         </div>
         
         <div class="block">
             <div>
-                <audio id="player"></audio>
-				<table>
-                    <tr>
-                        <div id="songName"></div>
-                    </tr>
-                    <tr>
-						<td>
-							<i class="material-icons" id="noSongButton">album</i>
-							<i class="material-icons playerControl buttonPlay" id="playerPlayButton" onclick='playAudio();' style="display: none">play_circle_outline</i>
-							<i class="material-icons playerControl buttonPause" id="playerPauseButton" onclick='pauseAudio();' style="display: none">pause_circle_outline</i>
-						</td>
-						<td class="trackNumber unselectable" id="trackProgress">
-                            00:00
-						</td>
-						<td id="player">
-                            <div class="progressBar">
-                                <div class="progress" id="seekBar">
-                                    <div class="progressLine" id="progressLine"></div>
-                                </div>
-                                <div class="progressThumb" id="progressThumb"></div>
+                <audio id="audioPlayer"></audio>
+                <div id="songName"></div>
+				<div class="player">
+                    <div>
+                        <i class="material-icons" id="noSongButton">album</i>
+                        <i class="material-icons fontButton buttonPlay" id="playerPlayButton" onclick='playAudio();' style="display: none">play_circle_outline</i>
+                        <i class="material-icons fontButton buttonPause" id="playerPauseButton" onclick='pauseAudio();' style="display: none">pause_circle_outline</i>
+                    </div>
+                    <div class="trackNumber unselectable" id="trackProgress">
+                        00:00
+                    </div>
+                    <div id="player">
+                        <div class="progressBar">
+                            <div class="progress" id="seekBar">
+                                <div class="progressLine" id="progressLine"></div>
                             </div>
-                        </td>
-                        <td class="trackNumber unselectable" id="trackDuration">
-                            00:00
-                        </td>
-                        <td>
-                            <i class="material-icons" id="downloadButton" onclick='downloadAudio();' style="color: lightgray; font-size: 48px !important;">cloud_download</i>
-                        </td>
-                    </tr>
-                </table>
+                            <div class="progressThumb" id="progressThumb"></div>
+                        </div>
+                    </div>
+                    <div class="trackNumber unselectable" id="trackDuration">
+                        00:00
+                    </div>
+                    <div>
+                        <a id="downloadElement" download="">
+                            <i class="material-icons" id="downloadButton" style="color: lightgray; font-size: 48px !important;">cloud_download</i>
+                        </a>
+                    </div>
+                </div>
             </div>
             <h2>My tracks:</h2>
-            
-            <div class="song" onclick='setSong("Calm in the Storm");'>
+
+            <div class="songBlock" onclick='setSong("Calm in the Storm");'>
                 <h3>Calm in the Storm</h3>
-                <small>00:05.13</small>
+                <div class="blockInfo">
+                    <small>00:05.13</small>
+                    <small>13/10/2018</small>
+                </div>
             </div>
-            <div class="song" onclick='setSong("Movin\x27 On");'>
+            <div class="songBlock" onclick='setSong("Movin\x27 On");'>
                 <h3>Movin' On</h3>
-                <small>00:04.03</small>
+                <div class="blockInfo">
+                    <small>00:04.03</small>
+                    <small>5/12/2018</small>
+                </div>
             </div>
-            <div class="song" onclick='setSong("Next Stage");'>
+            <div class="songBlock" onclick='setSong("Next Stage");'>
                 <h3>Next Stage</h3>
-                <small>00:05.08</small>
+                <div class="blockInfo">
+                    <small>00:05.08</small>
+                    <small>10/01/2019</small>
+                </div>
             </div>
-            <div class="song" onclick='setSong("Damnation");'>
+            <div class="songBlock" onclick='setSong("Damnation");'>
                 <h3>Damnation</h3>
-                <small>00:04.37</small>
+                <div class="blockInfo">
+                    <small>00:04.37</small>
+                    <small>01/07/2019</small>
+                </div>
             </div>
-            <div class="song" onclick='setSong("Peaks");'>
+            <div class="songBlock" onclick='setSong("Peaks");'>
                 <h3>Peaks</h3>
-                <small>00:05.20</small>
+                <div class="blockInfo">
+                    <small>00:05.20</small>
+                    <small>26/08/2019</small>
+                </div>
             </div>
         </div>
         
