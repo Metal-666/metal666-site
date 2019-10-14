@@ -3,7 +3,6 @@ btnPlay = document.getElementById('playerPlayButton');
 btnPause = document.getElementById('playerPauseButton');
 btnNoSong = document.getElementById('noSongButton');
 btnDownload = document.getElementById('downloadButton');
-//btnMute = document.getElementById('btnMute');
 progressBar = document.getElementById('seekBar');
 progressLine = document.getElementById('progressLine');
 progressThumb = document.getElementById('progressThumb');
@@ -11,7 +10,6 @@ trackDuration = document.getElementById('trackDuration');
 trackProgress = document.getElementById('trackProgress');
 songName = document.getElementById('songName');
 elementDownload = document.getElementById('downloadElement');
-//volumeBar = document.getElementById('volume-bar');
 var song;
 
 player.addEventListener('timeupdate', updateProgressBar, false);
@@ -47,9 +45,7 @@ function seek(e, pos) {
         }
         
         else {
-            
-            console.log("Pos = " + pos + "; offs = " + progressBar.offsetLeft);
-            
+         
             var x = pos - progressBar.offsetLeft;
             
             var percent = x / progressBar.offsetWidth;
@@ -139,9 +135,9 @@ function setSong(song) {
 				
 	};
 		
-	if(!btnDownload.classList.contains("playerControl")) {
+	if(!btnDownload.classList.contains("fontButton")) {
 		
-        btnDownload.classList.add("playerControl");
+        btnDownload.classList.add("fontButton");
 		
 	}
     
@@ -230,3 +226,19 @@ progressThumb.sdrag(function (el, pageX, startX, pageY, startY, fix) {
     seek(null, getOffset(progressThumb).left + 5);
     
 }, 'horizontal');
+
+$(window).scroll(function() {
+    
+    if($(this).scrollTop() > 1) {
+        
+        $('#headerMusic').addClass('stickyHeader');
+        
+    }
+      
+    else {
+        
+        $('#headerMusic').removeClass('stickyHeader');
+        
+    }
+      
+});

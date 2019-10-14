@@ -19,3 +19,34 @@ $(".tagDev").hover(function() {
     $("#tagInfo").removeClass("tagInfoShowDev");
 				
 });
+
+$(".tagPlatform").hover(function() {
+		
+    $("#tagInfo").addClass("tagInfoShowPlatform");
+				$("#tagInfo").text("These are supported platforms");
+				
+}, function() {
+		
+    $("#tagInfo").removeClass("tagInfoShowPlatform");
+				
+});
+
+$(window).scroll(function() {
+    
+    if($(this).scrollTop() > 1) {
+        
+        console.log("down");
+        
+        $('#headerProgramming').addClass('stickyHeader');
+        
+    }
+      
+    else {
+        
+        console.log("up");
+        
+        $('#headerProgramming').removeClass('stickyHeader');
+        
+    }
+      
+});
