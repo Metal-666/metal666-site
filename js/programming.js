@@ -1,7 +1,7 @@
 $(".tagJVM").hover(function() {
 		
     $("#tagInfo").addClass("tagInfoShowJVM");
-				$("#tagInfo").text("JVM is needed to run code in Java. Install it to run this program");
+	$("#tagInfo").text("JVM is needed to run code in Java. Install it to run this program");
 				
 }, function() {
 		
@@ -12,7 +12,7 @@ $(".tagJVM").hover(function() {
 $(".tagDev").hover(function() {
 		
     $("#tagInfo").addClass("tagInfoShowDev");
-				$("#tagInfo").text("I'm still working on this program. It may not work as intended");
+	$("#tagInfo").text("I'm still working on this program. It may not work as intended");
 				
 }, function() {
 		
@@ -23,7 +23,7 @@ $(".tagDev").hover(function() {
 $(".tagPlatform").hover(function() {
 		
     $("#tagInfo").addClass("tagInfoShowPlatform");
-				$("#tagInfo").text("These are supported platforms");
+	$("#tagInfo").text("These are supported platforms");
 				
 }, function() {
 		
@@ -35,16 +35,12 @@ $(window).scroll(function() {
     
     if($(this).scrollTop() > 1) {
         
-        console.log("down");
-        
         $('#headerProgramming').addClass('stickyHeader');
         
     }
       
     else {
-        
-        console.log("up");
-        
+     
         $('#headerProgramming').removeClass('stickyHeader');
         
     }

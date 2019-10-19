@@ -145,30 +145,6 @@ function setSong(song) {
   
 }
 
-function downloadAudio() {
-				
-	console.log("starting downloading");
-				
-    if(song != null) {
-				
-		console.log("song != null");
-				
-		var xhr = new XMLHttpRequest();
-		xhr.open("GET", 'music/' + song + ".mp3");
-		xhr.responseType = "blob";
-
-		xhr.onload = function () {
-		
-			saveData(this.response, song + ".mp3");
-		
-		};
-				
-		xhr.send();
-				
-    }
-		
-}
-
 function secondsToTime(secs) {
 								
     var sec_num = parseInt(secs, 10);
@@ -232,12 +208,14 @@ $(window).scroll(function() {
     if($(this).scrollTop() > 1) {
         
         $('#headerMusic').addClass('stickyHeader');
+        $('.playerBlock').addClass('playerBlockFloating');
         
     }
       
     else {
         
         $('#headerMusic').removeClass('stickyHeader');
+        $('.playerBlock').removeClass('playerBlockFloating');
         
     }
       

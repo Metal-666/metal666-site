@@ -1,9 +1,16 @@
 body {
     
     font-family: Lucida Console;
-    
     margin: 0%;
     padding: 0%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
   
 }
 
@@ -17,6 +24,13 @@ table td {
     
     padding: 8px;
     border-spacing: 0;
+    
+}
+
+h1 {
+    
+    padding: 0px;
+    margin: 0px;
     
 }
 
@@ -72,7 +86,14 @@ table td {
 
 .divInline {
     
-    display: inline-block;
+    display: flex;
+    
+}
+
+#languages {
+    
+    display: flex;
+    flex-direction: row-reverse;
     
 }
 
@@ -91,8 +112,10 @@ table td {
     
 }
 
-#header2 {
+#headerMain2 {
     
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
     margin: 5px 10px 10px 10px;
     box-shadow: 1px 1px 3px 1px gray;
@@ -306,7 +329,7 @@ table td {
     background: white radial-gradient(circle, transparent 1%, gray 1%) center/15000%;
     color: gray;
 
-    transition: all, .2s ease-out;
+    transition: background, .2s ease-out, color, .2s ease-out;
     
 }
 
@@ -420,4 +443,72 @@ table td {
     transform: translateY(-100%);
     background: green;
    
+}
+
+#githubButton {
+    
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    border-radius: 3px;
+    transition: box-shadow 0.1s ease-in, width 0.1s ease-in, height 0.1s ease-in;
+    
+}
+
+#githubButton:hover {
+    
+    box-shadow: 1px 1px 2px 2px gray;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    
+}
+
+#languageText {
+    
+    color: white;
+    background-color: #bda6a6;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in;
+    padding: 5px;
+    
+}
+
+#languageText:hover {
+    
+    background-color: white;
+    cursor: pointer;
+    color: gray;
+    
+}
+
+#languageTextChosen {
+    
+    color: gray;
+    background-color: white;
+    padding: 5px;
+    
+}
+
+.date {
+    
+    /*margin-left: 100px;*/
+    
+}
+
+.playerBlock {
+    
+    position: fixed;
+    background: white;
+    z-index: 2;
+    transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
+    padding: 3px;
+    border-radius: 0px 0px 5px 5px;
+    
+}
+
+.playerBlockFloating {
+    
+    box-shadow: 1px 1px 2px 2px gray;
+    transform: translateY(-48px);
+    
 }
