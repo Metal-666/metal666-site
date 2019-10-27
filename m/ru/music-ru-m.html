@@ -18,36 +18,36 @@
         
         <div class="block">
             <div id="blockMusic">
-            <div class="playerBlockMobile">
-                <audio id="audioPlayer"></audio>
-                <div id="songName" class="longText2">Выберите песню...</div>
-				<div id="playerMobile">
-                    <div>
-                        <i class="material-icons" id="noSongButton">album</i>
-                        <i class="material-icons fontButton buttonPlay" id="playerPlayButton" onclick='playAudio();' style="display: none">play_circle_outline</i>
-                        <i class="material-icons fontButton buttonPause" id="playerPauseButton" onclick='pauseAudio();' style="display: none">pause_circle_outline</i>
-                    </div>
-                    <div class="trackNumber" id="trackProgress">
-                        00:00
-                    </div>
-                    <div id="player">
-                        <div class="progressBar">
-                            <div class="progressMobile" id="seekBar">
-                                <div class="progressLine" id="progressLine"></div>
+                <div class="playerBlockMobile">
+                    <audio id="audioPlayer"></audio>
+                    <div id="songName" class="longText2">Выберите песню...</div>
+                    <div id="playerMobile">
+                        <div class="divInline">
+                            <i class="material-icons" id="noSongButton">album</i>
+                            <i class="material-icons fontButton buttonPlay" id="playerPlayButton" onclick='playAudio();' style="display: none">play_circle_outline</i>
+                            <i class="material-icons fontButton buttonPause" id="playerPauseButton" onclick='pauseAudio();' style="display: none">pause_circle_outline</i>
+                            <a id="downloadElement" download="">
+                                <i class="material-icons" id="downloadButton" style="color: lightgray; font-size: 48px !important;">cloud_download</i>
+                            </a>
+                        </div>
+                        <div id="player">
+                            <div class="progressBar">
+                                <div class="progressMobile" id="seekBar">
+                                    <div class="progressLine" id="progressLine"></div>
+                                </div>
+                                <div class="progressThumb" id="progressThumb"></div>
                             </div>
-                            <div class="progressThumb" id="progressThumb"></div>
+                        </div>
+                        <div class="divInline">
+                            <div class="trackNumber" id="trackProgress">
+                                00:00
+                            </div>
+                            <div class="trackNumber" id="trackDuration">
+                                00:00
+                            </div>
                         </div>
                     </div>
-                    <div class="trackNumber" id="trackDuration">
-                        00:00
-                    </div>
-                    <div>
-                        <a id="downloadElement" download="">
-                            <i class="material-icons" id="downloadButton" style="color: lightgray; font-size: 48px !important;">cloud_download</i>
-                        </a>
-                    </div>
                 </div>
-            </div>
             </div>
             <h2 style="margin-top: 156px;">Мои песни:</h2>
 
