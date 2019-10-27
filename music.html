@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <meta name="viewport" content="device-width, initial-scale=1.0">
     <head>
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <title>Music</title>
@@ -11,16 +10,8 @@
     
     <body>
         <div id="headerMusic">
-            <div class="divInline">
-                <div>
-                    <h1>Music</h1>
-                </div>
-            </div>
-            <div class="divInline" onclick='window.open("index.html", "_self");'>
-                <div>
-                    <i class="material-icons" id="backArrow">arrow_back</i>
-                </div>
-            </div>
+            <h1>Music</h1>
+            <i class="material-icons" id="backArrow" onclick='window.open("index.html", "_self");'>arrow_back</i>
         </div>
         
         <div class="block">
@@ -33,7 +24,7 @@
                         <i class="material-icons fontButton buttonPlay" id="playerPlayButton" onclick='playAudio();' style="display: none">play_circle_outline</i>
                         <i class="material-icons fontButton buttonPause" id="playerPauseButton" onclick='pauseAudio();' style="display: none">pause_circle_outline</i>
                     </div>
-                    <div class="trackNumber unselectable" id="trackProgress">
+                    <div class="trackNumber" id="trackProgress">
                         00:00
                     </div>
                     <div id="player">
@@ -44,7 +35,7 @@
                             <div class="progressThumb" id="progressThumb"></div>
                         </div>
                     </div>
-                    <div class="trackNumber unselectable" id="trackDuration">
+                    <div class="trackNumber" id="trackDuration">
                         00:00
                     </div>
                     <div>

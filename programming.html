@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <meta name="viewport" content="device-width, initial-scale=1.0">
     <head>
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <title>Programming</title>
@@ -10,16 +9,8 @@
     
     <body>
         <div id="headerProgramming">
-            <div class="divInline">
-                <div>
-                    <h1>Programming</h1>
-                </div>
-            </div>
-            <div onclick='window.open("index.html", "_self");'>
-                <div>
-                    <i class="material-icons fontIcon" id="backArrow">arrow_back</i>
-                </div>
-            </div>
+            <h1>Programming</h1>
+            <i class="material-icons fontIcon" id="backArrow" onclick='window.open("index.html", "_self");'>arrow_back</i>
         </div>
 		<div class="block">
 			<h2>My programs:</h2>
@@ -32,7 +23,7 @@
 				<div class="blockInfo">
                     <h4>PRIVateCHattingApp - a direct way to communicate between you
                         and your friends. No registration, no servers, just open and chat!</h4>
-                    <h4 class="date">15/09/2019</h4>
+                    <h4>15/09/2019</h4>
                 </div>
 				<div class="tagJVM">Requires JVM</div>
 				<div class="tagDev">In development</div>
@@ -47,7 +38,7 @@
                 <div class="blockInfo divInline">
                     <h4>Barley Break - old good game, you have definitely played it once upon a time.
                         I created a simple version of it, please enjoy!</h4>
-                    <h4 class="date">25/05/2019</h4>
+                    <h4>25/05/2019</h4>
                 </div>
 				<div class="tagJVM">Requires JVM</div>
 				<div class="tagDev">In development</div>
@@ -61,11 +52,24 @@
                 </a>
                 <div class="blockInfo divInline">
                     <h4>Confab - my another messenger, pretty simple and easy to use yet has all fancy features you would expect from a messaging app</h4>
-                    <h4 class="date">16/07/2019</h4>
+                    <h4>16/07/2019</h4>
                 </div>
 				<div class="tagDev">In development</div>
                 <div class="tagPlatform">Android</div>
                 <h5>*Note: As usual it's not finished yet, it's buggy, however all the basic stuff is there*</h5>
+			</div>
+            <div class="selectableBlock">
+				<h2 style="color: black;">Mod1</h2>
+				<a href="programs/Mod1.jar" download="">
+                    <i class="material-icons fontButton">cloud_download</i>
+                </a>
+                <div class="blockInfo divInline">
+                    <h4>Mod1 - my first mod for Minecraft; it's supposed to bring more variety to the vanilla game while not changing it's mechanics too much</h4>
+                    <h4>08/03/2019</h4>
+                </div>
+                <div class="tagJVM">Requires JVM</div>
+				<div class="tagDev">In development</div>
+                <div class="tagPlatform">Minecraft Mod</div>
 			</div>
 		</div>
         <div id="tagInfo"></div>
