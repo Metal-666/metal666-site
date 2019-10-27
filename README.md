@@ -1,0 +1,4 @@
+# Metal666 site
+Hi there! I'm Metal666, a student from Kyiv, Ukraine. I created this site ~~to show off my skills~~ to practice and just for fun ;) Two of my main hobbies are programming and writing music. I make programs for PC, Android, Web and I play guitar and drums. I like listening to \m/**_DEATHCORE_** & **_METALCORE_** \m/ :D. Feel free to contact me and ask any questions! (pls, I need friends)
+***
+Дарова! Я Метал666, студент(почти) из Киева, Украина. Я сделал этот сайт ~~чтобы повыпендриваться~~ чтобы потренироваться и просто по приколу ;) Мои любимые хобби - программировать и писать музыку. Я делаю программы под ПК, Андроид, Веб и играю на гитаре и ударных. Я люблю \m/**_ДЭТКОР_** & **_МЕТАЛКОР_** \m/ :D. Не стесняйтесь обратиться ко мне и задать любые вопросы! (пж, мне нужны друзья)
