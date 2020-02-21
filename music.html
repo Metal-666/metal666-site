@@ -14,7 +14,7 @@
             <i class="material-icons" id="backArrow" onclick='window.open("index.html", "_self");'>arrow_back</i>
         </div>
         
-        <div class="block">
+        <div class="block" style="margin-top: 90px;">
             <div class="playerBlock">
                 <audio id="audioPlayer"></audio>
                 <div id="songName">Choose a song to play...</div>
@@ -46,56 +46,60 @@
                 </div>
             </div>
             <h2 style="margin-top: 90px;">My tracks:</h2>
-
-            <div class="songBlock" onclick='setSong("Calm in the Storm");'>
-                <h3>Calm in the Storm</h3>
-                <div class="blockInfo">
-                    <small>00:05.13</small>
-                    <small>13/10/2018</small>
+            <div class="block">
+                <img src="images/cover_eclipse.png" width=256px height=256px>
+                <h1>ECLIPSE</h1>
+                <div class="songBlock" onclick='setSong("Calm in the Storm");'>
+                    <h3>Calm in the Storm</h3>
+                    <div class="blockInfo">
+                        <small>00:05.13</small>
+                        <small>13/10/2018</small>
+                    </div>
+                </div>
+                <div class="songBlock" onclick='setSong("Movin\x27 On");'>
+                    <h3>Movin' On</h3>
+                    <div class="blockInfo">
+                        <small>00:04.03</small>
+                        <small>5/12/2018</small>
+                    </div>
+                </div>
+                <div class="songBlock" onclick='setSong("Next Stage");'>
+                    <h3>Next Stage</h3>
+                    <div class="blockInfo">
+                        <small>00:05.08</small>
+                        <small>10/01/2019</small>
+                    </div>
+                </div>
+                <div class="songBlock" onclick='setSong("Damnation");'>
+                 <h3>Damnation</h3>
+                    <div class="blockInfo">
+                        <small>00:04.37</small>
+                        <small>01/07/2019</small>
+                    </div>
+                </div>
+                <div class="songBlock" onclick='setSong("Peaks");'>
+                    <h3>Peaks</h3>
+                    <div class="blockInfo">
+                        <small>00:05.20</small>
+                        <small>26/08/2019</small>
+                    </div>
+                </div>
+                <div class="songBlock" onclick='setSong("Eclipse");'>
+                    <h3>Eclipse</h3>
+                    <div class="blockInfo">
+                        <small>00:06.17</small>
+                        <small>30/10/2019</small>
+                    </div>
+                </div>
+                <div class="songBlock" onclick='setSong("Fall");'>
+                    <h3>Fall</h3>
+                    <div class="blockInfo">
+                        <small>00:03.34</small>
+                        <small>31/10/2019</small>
+                    </div>
                 </div>
             </div>
-            <div class="songBlock" onclick='setSong("Movin\x27 On");'>
-                <h3>Movin' On</h3>
-                <div class="blockInfo">
-                    <small>00:04.03</small>
-                    <small>5/12/2018</small>
-                </div>
-            </div>
-            <div class="songBlock" onclick='setSong("Next Stage");'>
-                <h3>Next Stage</h3>
-                <div class="blockInfo">
-                    <small>00:05.08</small>
-                    <small>10/01/2019</small>
-                </div>
-            </div>
-            <div class="songBlock" onclick='setSong("Damnation");'>
-                <h3>Damnation</h3>
-                <div class="blockInfo">
-                    <small>00:04.37</small>
-                    <small>01/07/2019</small>
-                </div>
-            </div>
-            <div class="songBlock" onclick='setSong("Peaks");'>
-                <h3>Peaks</h3>
-                <div class="blockInfo">
-                    <small>00:05.20</small>
-                    <small>26/08/2019</small>
-                </div>
-            </div>
-            <div class="songBlock" onclick='setSong("Eclipse");'>
-                <h3>Eclipse</h3>
-                <div class="blockInfo">
-                    <small>00:06.17</small>
-                    <small>30/10/2019</small>
-                </div>
-            </div>
-            <div class="songBlock" onclick='setSong("Fall");'>
-                <h3>Fall</h3>
-                <div class="blockInfo">
-                    <small>00:03.34</small>
-                    <small>31/10/2019</small>
-                </div>
-            </div>
+            
             <div style="padding: 10px;">Songs written for other people:</div>
             <div class="songBlock" onclick='setSong("Song1");'>
                 <h3>Song1</h3>
@@ -111,6 +115,7 @@
                     <small>20/09/2019</small>
                 </div>
             </div>
+            
             <div style="padding: 10px;">Parodies:</div>
             <div class="songBlock" onclick='setSong("DOOMGoesMetal");'>
                 <h3>DOOMGoesMetal</h3>
